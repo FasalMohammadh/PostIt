@@ -1,0 +1,105 @@
+.friendsBox,
+.allpost {
+    padding: 30px;
+    border-radius: 0 !important;
+}
+.friendsBox {
+    max-height: 80vh;
+    overflow: auto;
+}
+section {
+    overflow: hidden;
+}
+.allpost {
+    max-height: 80vh;
+    overflow: auto !important;
+}
+.topic {
+    font-size: 30px;
+    font-weight: bold;
+}
+.bi-chat-square-dots-fill {
+    transition: all 0.25s ease-in-out;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    background-color: black;
+    padding: 6px 12px 0 12px;
+    border-radius: 50%;
+}
+.msgbox {
+    height: 50vh;
+    background-color: white;
+    width: 300px;
+    position: fixed;
+    bottom: 80px;
+    left: -500px;
+    transition: all 0.25s ease;
+    opacity: 0;
+}
+#chatWindow {
+    height: 50vh;
+    background-color: white;
+    width: 300px;
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+}
+#check:checked + .msgbox {
+    left: 20px;
+    opacity: 1;
+}
+.idHolder * {
+    pointer-events: none;
+}
+section > section {
+    height: calc(50vh - 100px);
+    overflow: auto;
+}
+.insert {
+    position: absolute;
+    bottom: 0;
+}
+.insert > span {
+    font-size: 20px;
+}
+.insert input {
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 30px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+}
+.insert input:focus {
+    outline: none;
+}
+.msgTime {
+    visibility: hidden;
+    color: white;
+    font-size: 16px;
+}
+.msgText {
+    color: white;
+    font-size: 25px;
+    text-align: right;
+}
+.msg {
+    width: fit-content;
+    padding: 0 20px;
+    float: right;
+}
+.msg:focus + .msgTime {
+    visibility: visible !important;
+}
+.box > span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.active {
+    background-color: blue !important;
+}

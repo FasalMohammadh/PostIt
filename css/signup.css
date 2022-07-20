@@ -1,0 +1,41 @@
+.signup {
+    padding: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(27, 25, 25, 0.75);
+    border-radius: 12px;
+    margin: 50px auto;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: white;
+}
+.logo {
+    object-fit: cover;
+    font-size: 100px;
+    width: 150px;
+    height: 150px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: white;
+}
+label {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+}
+.err {
+    padding: 0 10px;
+    color: #d8000c;
+    background-color: #ffd2d2;
+    vertical-align: middle;
+    float: right;
+}
+.noErr {
+    vertical-align: middle;
+    padding: 0 10px;
+    float: right;
+    color: #4f8a10;
+    background-color: #dff2bf;
+}
+.box {
+    text-align: center;
+    display: block;
+}

@@ -1,0 +1,35 @@
+.bg {
+    max-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    filter: blur(8px);
+}
+.card-img-top {
+    object-fit: contain;
+    max-height: 250px;
+    width: auto;
+    border-radius: 12px;
+}
+body {
+    background-color: #121212;
+}
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(32, 34, 37, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: white;
+    overflow: hidden;
+}
+.box > span {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    background-color: black;
+    cursor: pointer;
+}
+.active {
+    background-color: blue !important;
+}

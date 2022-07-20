@@ -1,0 +1,446 @@
+
+
+    <!-- <aside class="col-12">
+            <button class="btn btn-primary">Write your post</button>
+            <div class="all-post">
+            </div>
+        </aside> -->
+    <!-- 
+        <aside class="col-12">
+            <div class="chatBox">
+                <h4>Chat</h4>
+                <div class="unreadCount">1</div>
+                <span class="bi bi-plus"></span>
+                <div class="all-profile">
+                </div>
+            </div>
+            <div class="rooms">
+                <h4>Rooms</h4>
+                <div class="unreadCount">1</div>
+                <span class="bi bi-plus"></span>
+                <div class="all-rooms">
+                </div>
+            </div>
+        </aside>
+        <div class="activate"><span class="bi bi-menu-button-wide-fill" onclick="show()">
+            </span></div> -->
+             // $query="SELECT post_id,post_text,post_img_path,fullname,profile_pic_path,posted_time FROM Posts  JOIN Users ON email=user_email WHERE user_email IN(SELECT user_email2 FROM Users_friends WHERE user_email='$logedEmail')";
+
+        // //          if (!$con -> query($query)) {
+        // //     echo("Error description: " . $con -> error);
+        // // }
+        // // else{
+        // //     echo("no error");
+        // // }
+
+
+        // $res=mysqli_query($con, $query);
+
+
+
+        // while ($rec=mysqli_fetch_array($res)) {
+        //     echo '
+
+        //         <div class="card border overflow-hidden"id="'.$rec[0].'">
+        //             <div class="card-body p-0">
+        //             <div class="singlePerson">
+        //             <img src="'.$rec[4].'" class="rounded-circle" width="50px" height="50px">
+        //                 <span>
+        //                     <span class="card-title">'.$rec[3].'</span>
+        //                     <div class="time">Posted on '.$rec[5].'</div>
+        //                 </span>
+        //             </div>
+        //                 <p class="card-text rounded p-2">'.$rec[1].'</p>
+        //             </div>
+        //             <img src="'.$rec[2].'" class="card-img-top" >
+                    
+        //             <div class="box d-flex">
+        //                 <span onclick="toggleLike()" class="btnStar' ;
+
+        // $query="SELECT * FROM Posts_users_like WHERE user_email='$logedEmail' AND post_id='$rec[0]'";
+            
+        // $resnew=mysqli_query($con, $query);
+        //     if ($recnew=mysqli_fetch_array($resnew)) {
+        //         echo ' active" >
+        //                 <span class="bi bi-star-fill"></span>';
+        //     } else {
+        //         echo '">
+        //                 <span class="bi bi-star"></span>';
+        //     }
+
+        //     $query="SELECT COUNT(*) FROM Posts_users_like WHERE post_id='$rec[0]'";
+        //     $resLikeCount=mysqli_query($con, $query);
+        //     $recLikeCount=mysqli_fetch_array($resLikeCount);
+
+        //     echo ' Star</span> 
+        //                 <span class="text-center"><span class="bi bi-star"></span> Total Stars '.$recLikeCount[0].'</span> 
+        //             </div>
+        //             </div>
+        //     ';
+        // }
+
+    <!--     <div class="profile bg-dark text-center p-5">
+        <h3 class="mb-3">Profile</h3>
+        <img src="profile1.jpg" class="mx-auto d-block rounded-circle" alt="Profile Pic" width="200" height="200">
+        <h3 class="text-center">Username</h3>
+
+        <div class="row">
+            <div class="card col-9 col-md-5 mx-auto p-2">
+                <h5 class="card-title my-2">Card title</h5>
+                <img src="profile1.jpg" class="card-img-top" alt="..." width="200" height="200">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-primary"><span class="bi bi-hand-thumbs-up-fill"></span>Total Likes</button>
+                    <button class="btn btn-danger"><span class="bi bi-trash"></span>Delete Post</button>
+                </div>
+
+            </div>
+            <div class="card col-9 col-md-5 mx-auto bg-primary">
+                <h5 class="card-title my-2 ">Card title</h5>
+                <img class="card-img-top rounded" alt="..." height="200">
+                <div class="card-body">
+                    <p class="card-text bg-dark">Some quick example text to build on the card title and make up the bulk
+                        of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div> -->
+    <style type="text/css">
+        /*        .profile>h3 {
+            color: white;
+        }
+
+        .profile img {
+            object-fit: cover;
+        }
+
+        .card {
+            margin: 30px auto;
+        }*/
+        /*
+        img {
+            object-fit: contain;
+            background: black;
+        }*/
+        /*
+        .boxStAndPost {
+            color: white;
+        }*/
+
+        /*.boxStAndPost .bi{
+            font-size: 40px;
+        }
+*/
+    </style>
+
+    <!--     <style>
+
+        /*button {
+            display: block;
+        }*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            width: 100%;
+            background: linear-gradient(to right, #F65A64, #651CDA);
+            padding:20px 0;
+           
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+h1{
+    margin-left: 10px;
+}
+
+        h1,
+        h4,
+        .profile-img,
+        .room-img,
+        .unreadCount,
+        .searchBox {
+            display: inline-block;
+        }
+
+        .post-like {
+            cursor: pointer;
+        }
+
+        .post-like .bi {
+            color: rgba(255, 187, 0, 0.788);
+            font-size: 20px;
+            padding: 2px;
+        }
+
+        .post-like .bi:first-child {
+            color: rgba(0, 0, 255, 0.856);
+        }
+
+        .post-like .bi:last-child {
+            color: rgba(255, 0, 0, 0.856);
+        }
+        .searchBox {
+            background-color: #fff;
+            width: fit-content;
+            float: right;
+            padding: 0 5px;
+            border: 1px solid rgba(128, 128, 128, 0.50);
+            border-radius: 4px;
+            display: flex;
+            margin-right: 40px;
+        }
+
+        .search {
+            padding: 5px;
+            border: none;
+        }
+
+        .search:focus {
+            outline: none;
+        }
+
+        .bi {
+            padding: 5px;
+            color: grey;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .bi-pin {
+            margin-left: 40px;
+        }
+        .bi-plus {
+            padding: 0;
+        }
+        .left {
+            min-width: 60px;
+        }
+		.middle{
+			border-right:3px solid grey;
+			border-left:3px solid grey;
+		}
+        .chatBox,
+        .rooms {
+            padding: 20px;
+            border-top: 2px solid rgba(128, 128, 128, 0.50);
+        }
+        .chatBox *:not(.bi) {
+            color: black;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+        }
+        .single-post * {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .single-post {
+            background: rgba(255, 255, 255, 0.20);
+            box-shadow: 0 0 5px rgba(49, 47, 179, 0.5);
+            border-radius: 10px;
+            padding: 10px 20px;
+            width: fit-content;
+            margin:20px auto;
+        }
+
+        .btn-post {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: large;
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: rgb(85, 85, 85);;
+            color: white;
+        }
+
+        .profile-img,
+        .room-img,
+        .profile-status {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid grey;
+        }
+        aside {
+            margin: 10px;
+        }
+        .bi-menu-button-wide-fill {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: rgb(85, 85, 85);
+            font-size: 25px;
+        }
+        .right {
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        @media(min-width:768px) {
+            .middle {
+                min-width: calc(100% - 500px);
+            }
+            .right {
+                min-width: 300px;
+                height: auto;
+                padding: 20px;
+                overflow: visible;
+            }
+            .activate {
+                display: none !important;
+            }
+        }
+        @media(max-width:768px) {
+            .search {
+            width:100px;
+        }
+        main {
+            flex-wrap:wrap;
+        }
+        .profile-status {
+    display: inline-block;
+}
+.middle{
+	border:none;
+}
+        }
+        .activate{
+            display: inline-block;
+        }
+        .activate-box {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            overflow-y: scroll;
+            height: 70vh;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 5px rgba(49, 47, 179, 0.5);
+            border-radius: 10px;
+        }
+        .name {
+            margin-left: 10px;
+        }
+
+        .post-pic {
+            display: block;
+        }
+
+        .greenDot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            border-radius: 50%;
+            bottom: 4px;
+            right: 4px;
+        }
+
+        .single-profile {
+        	justify-content:space-between;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        main {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+        }
+
+        .unreadCount,
+        .bi-plus {
+            background: rgba(255, 0, 0, 0.24);
+            color: rgb(180, 0, 0);
+            width: 15px;
+            height: 15px;
+            text-align: center;
+            line-height: 15px;
+            font-size: 15px;
+            border-radius: 50%;
+        }
+    </style> -->
+    <!--     <script>
+          let names=["Susan Johnson","Lauren Roberts","Ethan Lattimore","Jeffrey Clark","Shirley"];       
+        for (let i = 0; i < 5; i++) {
+            let allProfile = document.querySelector('.all-profile');
+            allProfile.innerHTML += `
+            <div class="single-profile">
+            <span class="profile-img">
+                <img src="profile1.jpg" alt="">
+                <span class="greenDot"></span>
+            </span>
+            <span class="name"></span>
+            <span class="bi bi-pin"></span>
+        </div>`
+			
+			let name=document.querySelectorAll('.name');
+			name[i].innerText=names[i];
+			
+			 let roomsArr=["Deliveries","Design Team","General Chat","Eng Team","DJ Room"];       
+			
+            let allRooms = document.querySelector('.all-rooms');
+            allRooms.innerHTML += `
+            <div class="single-profile">
+            <span class="room-img">
+                <img src="room1.jpg">
+            </span>
+            <span class="room-name"></span>
+            <span class="bi bi-pin"></span>
+        </div>`
+			
+			let rooms=document.querySelectorAll('.room-name');
+			rooms[i].innerText=roomsArr[i];
+			
+            let left = document.querySelector('.left');
+            left.innerHTML += ` <div class="profile-status">
+            <img src="profile1.jpg" alt="" width="60px" height="60px">
+        </div>`
+
+        let allPost = document.querySelector('.all-post');
+        allPost.innerHTML+=` <div class="single-post">
+                    <div class="post-topic">Celebrating Birthday With My Buddies</div>
+                    <img class="post-pic" src="profile1.jpg" alt="Loading Failed" width="200px" height="200px">
+                    <div class="post-text">
+                        @Nimal
+                        @Kamal
+                        @Indika
+                    </div>
+                    <div class="post-like">
+                        <span class="bi bi-hand-thumbs-up-fill"></span>
+                        <span class="bi bi-emoji-laughing-fill"></span>
+                        <span class="bi bi-emoji-heart-eyes-fill"></span>
+                        <span class="bi bi-emoji-wink-fill"></span>
+                        <span class="bi bi-emoji-angry-fill"></span>
+                    </div>
+                </div>`
+        }
+       function show() {
+            let right = document.querySelector('#right');
+            if(right.className=="right"){
+                right.classList.replace('right', 'activate-box');
+            }
+            else{
+                right.classList.replace('activate-box','right');
+            }
+        } 
+        
+    </script> -->

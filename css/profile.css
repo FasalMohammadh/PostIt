@@ -1,0 +1,23 @@
+.smallBox:hover {
+    background-color: #adb5bd;
+}
+body {
+    background-image: linear-gradient(10deg, #cfd9df, #e2ebf0) !important;
+}
+.bgBox {
+    position: relative;
+}
+.bi-images {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.active {
+    background-color: blue !important;
+}
